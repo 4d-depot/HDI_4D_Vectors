@@ -1,0 +1,288 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 800,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 540,
+	"windowMaxHeight": 32000,
+	"width": 960,
+	"height": 640,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onCloseBox"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 920,
+					"height": 593,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "objTabs",
+					"dataSourceTypeHint": "object",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"BtnOK": {
+					"type": "button",
+					"top": 616,
+					"left": 837,
+					"width": 102,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"shortcutKey": "[Enter]",
+					"text": "OK",
+					"class": "Buttons_13",
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BtnOK.4dm"
+				},
+				"Line": {
+					"type": "line",
+					"top": 0,
+					"left": 480,
+					"height": 640,
+					"visibility": "hidden",
+					"sizingY": "grow",
+					"stroke": "#800080",
+					"strokeDashArray": "1 1"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information": {
+					"type": "input",
+					"top": 57,
+					"left": 32,
+					"width": 547,
+					"height": 540,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 95,
+					"left": 599,
+					"width": 326,
+					"height": 490,
+					"picture": "Images/126fe189-5c1c-4148-a00f-f92787a1848b.png",
+					"pictureFormat": "scaled",
+					"sizingX": "move",
+					"sizingY": "fixed"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information2": {
+					"type": "input",
+					"top": 51,
+					"left": 40,
+					"width": 766,
+					"height": 80,
+					"sizingY": "grow",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"Trace": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 586,
+					"left": 26,
+					"width": 105,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingY": "move"
+				},
+				"Popup Dropdown List": {
+					"type": "dropdown",
+					"left": 139,
+					"top": 209,
+					"width": 517,
+					"height": 39,
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.prompts",
+					"dataSourceTypeHint": "object",
+					"fontSize": 14
+				},
+				"Button": {
+					"type": "button",
+					"text": "Use Selected Prompt",
+					"top": 210,
+					"left": 676,
+					"width": 146,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 138,
+					"top": 261,
+					"width": 684,
+					"height": 344,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"dataSource": "Form:C1466.receipts",
+					"listboxType": "collection",
+					"fontSize": 14,
+					"columns": [
+						{
+							"header": {
+								"text": "Cooking Recipe",
+								"name": "Header1",
+								"fontWeight": "bold"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 304,
+							"dataSource": "This:C1470.Title"
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Cosine Similarity",
+								"fontWeight": "bold"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.cosineSimilarity"
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Dot Similarity",
+								"fontWeight": "bold"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSource": "This:C1470.dotSimilarity"
+						},
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Euclidian Distance",
+								"fontWeight": "bold"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.euclideanDistance"
+						}
+					]
+				},
+				"Input": {
+					"type": "input",
+					"left": 139,
+					"top": 163,
+					"width": 517,
+					"height": 32,
+					"dataSource": "Form:C1466.customPrompt",
+					"placeholder": "Custom Prompt",
+					"fontSize": 14
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Use Custom Prompt",
+					"top": 160,
+					"left": 676,
+					"width": 146,
+					"height": 38,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 139,
+					"top": 118,
+					"width": 683,
+					"height": 32,
+					"dataSource": "Form:C1466.OpenAIKey",
+					"placeholder": "Open AI API Key",
+					"fontSize": 14
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"geometryStamp": 636,
+	"windowSizingX": "variable",
+	"windowSizingY": "variable"
+}
