@@ -35,7 +35,7 @@
 		</field>
 		<field name="Preparation" uuid="0197883622617E62B816184A7F595AEE" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="Utensils" uuid="0197883652D97F9D980FFFD5A90BC143" type="10" limiting_length="255" never_null="true" id="5"/>
-		<field name="Vector" uuid="0197886A816473F3A3C171093480899D" type="21" blob_switch_size="2147483647" never_null="true" id="6"/>
+		<field name="Vector" uuid="0197886A816473F3A3C171093480899D" type="21" blob_switch_size="2147483647" never_null="true" id="6" class_id="4D.Vector"/>
 		<primary_key field_name="ID" field_uuid="0197882C73827BA9AC08A802C68CFD6A"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="7">
@@ -63,11 +63,6 @@
 	</index>
 	<index kind="regular" unique_keys="true" uuid="0197887E10FC7EF58627F78CE2BB1B86" type="7">
 		<field_ref uuid="0197887E10FC7A7A86F34FF02880D360" name="ID">
-			<table_ref uuid="0197887E10F9744194593022071ACCD9" name="Prompts"/>
-		</field_ref>
-	</index>
-	<index kind="regular" uuid="01978C9EAA2779A9A416540A98ACBF90" type="3">
-		<field_ref uuid="0197887E664F7B538BCEF146F9026E1B" name="Vector">
 			<table_ref uuid="0197887E10F9744194593022071ACCD9" name="Prompts"/>
 		</field_ref>
 	</index>
