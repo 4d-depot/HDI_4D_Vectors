@@ -181,7 +181,7 @@
 						"onDataChange",
 						"onSelectionChange"
 					],
-					"dataSource": "Form:C1466.receipts",
+					"dataSource": "Form:C1466.recipes",
 					"listboxType": "collection",
 					"fontSize": 14,
 					"columns": [

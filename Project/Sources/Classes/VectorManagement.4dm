@@ -22,7 +22,7 @@ Function calculate($prompt : Text; $apiKey : Text) : Collection
 		// Calculate similarities between the prompt vector and all image vectors
 		var $recipeList:=This:C1470._calculateVectors($vector)
 		
-		// Return the receipts ordered by cosine similarity (most similar first)
+		// Return the recipes ordered by cosine similarity (most similar first)
 		return $recipeList.orderBy("cosineSimilarity desc")
 		
 	Else 
@@ -33,7 +33,7 @@ Function calculate($prompt : Text; $apiKey : Text) : Collection
 	
 	
 	//****************************************************************
-	// Calculates receipt similarity based on a selected prompt object
+	// Calculates recipe similarity based on a selected prompt object
 Function calculateWithSelectedPrompt($prompt : cs:C1710.PromptsEntity) : Collection
 	
 	//If trace mode is on, start 4D's TRACE debugger
@@ -44,13 +44,13 @@ Function calculateWithSelectedPrompt($prompt : cs:C1710.PromptsEntity) : Collect
 	// Use precalculated vector from the selected prompt and calculate similarities
 	var $recipeList:=This:C1470._calculateVectors($prompt.Vector)
 	
-	// Return the receipts ordered by cosine similarity (most similar first)
+	// Return the recipes ordered by cosine similarity (most similar first)
 	return $recipeList.orderBy("cosineSimilarity desc")
 	
 	
 	
 	//****************************************************************
-	// Calculate and store similarity metrics for all receipts
+	// Calculate and store similarity metrics for all recipes
 shared Function _calculateVectors($vector : 4D:C1709.Vector) : Collection
 	var $recipe : Object
 	var $recipeList:=ds:C1482.Recipes.all().toCollection()
