@@ -35,7 +35,9 @@
 		</field>
 		<field name="Preparation" uuid="0197883622617E62B816184A7F595AEE" type="10" limiting_length="255" never_null="true" id="4"/>
 		<field name="Utensils" uuid="0197883652D97F9D980FFFD5A90BC143" type="10" limiting_length="255" never_null="true" id="5"/>
-		<field name="Vector" uuid="0197886A816473F3A3C171093480899D" type="21" blob_switch_size="2147483647" never_null="true" id="6" class_id="4D.Vector"/>
+		<field name="Vector" uuid="0197886A816473F3A3C171093480899D" type="21" blob_switch_size="2147483647" never_null="true" id="6">
+			<field_extra class_id="4D.Vector"/>
+		</field>
 		<primary_key field_name="ID" field_uuid="0197882C73827BA9AC08A802C68CFD6A"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="7">
@@ -47,7 +49,9 @@
 	<table name="Prompts" uuid="0197887E10F9744194593022071ACCD9" id="4">
 		<field name="ID" uuid="0197887E10FC7A7A86F34FF02880D360" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
 		<field name="Description" uuid="0197887E381F72DDB8A81D466AE20BEB" type="10" limiting_length="255" never_null="true" id="2"/>
-		<field name="Vector" uuid="0197887E664F7B538BCEF146F9026E1B" type="21" blob_switch_size="2147483647" never_null="true" id="3" class_id="4D.Vector"/>
+		<field name="Vector" uuid="0197887E664F7B538BCEF146F9026E1B" type="21" blob_switch_size="2147483647" never_null="true" id="3">
+			<field_extra class_id="4D.Vector"/>
+		</field>
 		<primary_key field_name="ID" field_uuid="0197887E10FC7A7A86F34FF02880D360"/>
 		<table_extra>
 			<editor_table_info displayable_fields_count="6">
